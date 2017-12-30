@@ -11,8 +11,8 @@ CREATE TABLE `pmtasks` (
   PRIMARY KEY (`id`),
   KEY `fk_tsk_prj_idx` (`project_id`),
   KEY `fk_tsk_usr_idx` (`user_id`),
+  KEY `fk_tsk_tsk_idx` (`parent_task_id`),
   CONSTRAINT `fk_tsk_prj` FOREIGN KEY (`project_id`) REFERENCES `pmprojects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_tsk_tsk` FOREIGN KEY (`parent_task_id`) REFERENCES `pmtasks` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_tsk_usr` FOREIGN KEY (`user_id`) REFERENCES `pmusers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
-
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
