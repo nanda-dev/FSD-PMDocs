@@ -26,29 +26,39 @@ Run the following scripts in the given order:\par
 \pard\sa200\sl276\slmult1 The above sqls are present inside the 'sqls' folder, in the GitHub repo listed under 1.1.\par
 \b 2.2 Backend Server\par
 \b0 2.2.1 \i Run Pre-built JAR\i0\par
-a. Download the "PMServer-0.0.1-SNAPSHOT.jar" jar from "deployables" folder, present in the GitHub repo listed under 1.1.\par
-b. Open terminal/command-prompt, navigate to the folder containing the .jar file downloaded in step 2.2.1.a\par
+
+\pard\li720\sa200\sl276\slmult1 a. Download the "PMServer-0.0.1-SNAPSHOT.jar" jar from "deployables" folder, present in the GitHub repo listed under 1.1, or generate executable .jar file following the steps listed under 2.2.2.\par
+b. Open terminal/command-prompt, navigate to the folder containing the executable .jar file mentioned in step 2.2.1.a\par
 c. Run the .jar file using the following command: "java -jar PMServer-0.0.1-SNAPSHOT.jar"\par
 NOTE: The server is configured to use port "8085". If this needs to be changed, follow the steps given in 2.2.2 to checkout the project, and modify the server.port entry in application.properties file before generating the .jar file.\par
-2.2.2 Build Executable .JAR File\par
-a. Checkout the PMServer project from GitHub repo listed under 1.2\par
+
+\pard\sa200\sl276\slmult1 2.2.2 Build Executable .JAR File\par
+
+\pard\li720\sa200\sl276\slmult1 a. Checkout the PMServer project from GitHub repo listed under 1.2\par
 b. Open terminal/command-prompt, navigate to the PMServer root folder (where the pom.xml file resides)\par
 c. Run the following command: mvn clean install\par
 d. Executable .jar file will be generated under the "target" folder\par
 NOTE: Maven needs to be installed in the machine, and the PATH environment variable set appropriately to issue the "mvn" command.\par
-NOTE: Database server is assumed to be running in the same machine as the API server, using the root user credentials listed in 2.1. In case of any changes, checkout the PMServer project, update the database connection configuration in application.properties file, and take a new build.\par
+
+\pard\sa200\sl276\slmult1 NOTE: Database server is assumed to be running in the same machine as the API server, using the root user credentials listed in 2.1. In case of any changes, checkout the PMServer project, update the database connection configuration in application.properties file, and take a new build.\par
+Ensure Java is installed and PATH variable is updated appropriately.\par
 2.2.3\i  Verify APIs are Up and Running\i0\par
-a. From the machine where the Server .jar is running, open the following URL in a browser: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/ }}{\fldrslt{http://localhost:8085/\ul0\cf0}}}}\f0\fs22\par
+
+\pard\li720\sa200\sl276\slmult1 a. From the machine where the Server .jar is running, open the following URL in a browser: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/ }}{\fldrslt{http://localhost:8085/\ul0\cf0}}}}\f0\fs22\par
 You should see the greeting message: \i "Hello, this is the Backend API Server for Project Manager SPA Application!"\par
 \i0 NOTE: Make sure that the Database server is up and running before starting then API Server.\i\par
-\b\i0 2.3 Front-End Application\par
+
+\pard\sa200\sl276\slmult1\b\i0 2.3 Front-End Application\par
 \b0 2.3.1 \i Run Pre-built JAR\i0\par
-a. Download the "FSD-PMSPApp-0.0.1-SNAPSHOT. jar" from "deployables" folder, present in the GitHub repo listed under 1.1.\par
-b. Open terminal/command-prompt, navigate to the folder containing the .jar file downloaded in step 2.2.1.a\par
+
+\pard\li720\sa200\sl276\slmult1 a. Download the "FSD-PMSPApp-0.0.1-SNAPSHOT. jar" from "deployables" folder, present in the GitHub repo listed under 1.1, or generate executable .jar file following the steps listed under 2.3.2.\par
+b. Open terminal/command-prompt, navigate to the folder containing the .jar file mentioned in step 2.2.1.a\par
 c. Run the .jar file using the following command: "java -jar FSD-PMSPApp-0.0.1-SNAPSHOT.jar"\par
 NOTE: The application is configured to use port "8086". If this needs to be changed, follow the steps given in 2.3.2 to checkout the project, and modify the server.port entry in application.properties file before generating the .jar file.\par
-2.3.2 Build Executable .JAR File\par
-a. Checkout the PMSPApp project from GitHub repo listed under 1.3\par
+
+\pard\sa200\sl276\slmult1 2.3.2 Build Executable .JAR File\par
+
+\pard\li720\sa200\sl276\slmult1 a. Checkout the PMSPApp project from GitHub repo listed under 1.3\par
 b. Open terminal/command-prompt, navigate to the PMSPApp root folder (where the pom.xml file resides)\par
 c. Run the following commands: \par
 \tab i. npm install\par
@@ -57,13 +67,16 @@ d. Run the following command: mvn clean install\par
 e. Executable .jar file will be generated under the "target" folder\par
 NOTE: Maven needs to be installed in the machine, and the PATH environment variable set appropriately to issue the "mvn" command.\par
 Node and angular-cli need to be installed and the PATH variable set appropriately to run the commands listed under 2.3.2.c.\par
-2.3.2.c.i may only need to be run for the first time.\par
-2.3.3\i  Verify Application is Up and Running\i0\par
-a. From the machine where the Server .jar is running, open the following URL in a browser: {{\field{\*\fldinst{HYPERLINK http://localhost:8086/ }}{\fldrslt{http://localhost:8086/\ul0\cf0}}}}\f0\fs22\par
+Command referenced in 2.3.2.c.i may only need to be run for the first time.\par
+
+\pard\sa200\sl276\slmult1 2.3.3\i  Verify Application is Up and Running\i0\par
+
+\pard\li720\sa200\sl276\slmult1 a. From the machine where the Server .jar is running, open the following URL in a browser: {{\field{\*\fldinst{HYPERLINK http://localhost:8086/ }}{\fldrslt{http://localhost:8086/\ul0\cf0}}}}\f0\fs22\par
 You should see the Project Manager application's welcome page.\par
 NOTE: Make sure that the Database and Backend Server are up and running before running the application.\par
-\ul\b 3. PMServer API Reference\par
-\ulnone\b0 3.1 Get Users (only Active/Non-Deleted Users)\par
+
+\pard\sa200\sl276\slmult1\ul\b 3. PMServer API Reference\par
+\ulnone 3.1 Get Users (only Active/Non-Deleted Users)\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/user }}{\fldrslt{http://localhost:8085/api/user\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: GET\par
 REQUEST OBJECT FORMAT: N/A\par
@@ -80,7 +93,7 @@ RESPONSE OBJECT FORMAT:\par
     "lastName": "Sawyer"\par
   \}\par
 ]\par
-3.2 Add User\par
+\b 3.2 Add User\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/user }}{\fldrslt{http://localhost:8085/api/user\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: POST\par
 REQUEST OBJECT FORMAT: \par
@@ -95,7 +108,7 @@ RESPONSE OBJECT FORMAT:\par
     "firstName": "Matt",\par
     "lastName": "Granger"\par
 \}\par
-3.3 Update User\par
+\b 3.3 Update User\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/user }}{\fldrslt{http://localhost:8085/api/user\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: PUT\par
 REQUEST OBJECT FORMAT: \par
@@ -110,13 +123,13 @@ RESPONSE OBJECT FORMAT:\par
     "firstName": "Matt",\par
     "lastName": "Granger"\par
 \}\par
-3.4 Delete User\par
+\b 3.4 Delete User\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/user/\{id\} }}{\fldrslt{http://localhost:8085/api/user/\{id\}\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: DELETE\par
 REQUEST OBJECT FORMAT: N/A\par
 RESPONSE OBJECT FORMAT:\par
 One of the following Strings: "Success", or "Failed"\par
-3.5 Get Projects\par
+\b 3.5 Get Projects\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/project }}{\fldrslt{http://localhost:8085/api/project\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: GET\par
 REQUEST OBJECT FORMAT: N/A\par
@@ -143,7 +156,7 @@ RESPONSE OBJECT FORMAT:\par
     "taskCount": 2\par
   \}\par
 ]\par
-3.6 Add Project\par
+\b 3.6 Add Project\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/project }}{\fldrslt{http://localhost:8085/api/project\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: POST\par
 REQUEST OBJECT FORMAT: \par
@@ -168,7 +181,7 @@ RESPONSE OBJECT FORMAT:\par
     "status": "I",\par
     "taskCount": 2\par
   \}\par
-3.7 Update Project\par
+\b 3.7 Update Project\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/project }}{\fldrslt{http://localhost:8085/api/project\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: PUT\par
 REQUEST OBJECT FORMAT:\par
@@ -193,7 +206,7 @@ RESPONSE OBJECT FORMAT:\par
     "status": "I",\par
     "taskCount": 2\par
   \}\par
-3.8 Suspend Project\par
+\b 3.8 Suspend Project\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/project/\{id\} }}{\fldrslt{http://localhost:8085/api/project/\{id\}\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: PUT\par
 REQUEST OBJECT FORMAT: N/A\par
@@ -208,7 +221,7 @@ RESPONSE OBJECT FORMAT:\par
     "status": "S",\par
     "taskCount": 2\par
   \}\par
-3.9 Get Tasks By Project\par
+\b 3.9 Get Tasks By Project\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/task/project/\{id\} }}{\fldrslt{http://localhost:8085/api/task/project/\{id\}\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: GET\par
 REQUEST OBJECT FORMAT: N/A\par
@@ -237,7 +250,23 @@ RESPONSE OBJECT FORMAT:\par
     "status": "I"\par
   \}\par
 ]\par
-3.10 Add Task\par
+\b 3.10 Get Task By Task Id\b0\par
+URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/task/\{id\} }}{\fldrslt{http://localhost:8085/api/task/\{id\}\ul0\cf0}}}}\i\f0\fs22\par
+\i0 METHOD: GET\par
+REQUEST OBJECT FORMAT: N/A\par
+RESPONSE OBJECT FORMAT:\par
+  \{\par
+    "id": 6,\par
+    "name": "Create Add User Screen",\par
+    "projectId": 1,\par
+    "priority": 10,\par
+    "parentTaskId": 5,\par
+    "userId": 1001,\par
+    "startDate": 1516041000000,\par
+    "endDate": 1516473000000,\par
+    "status": "I"\par
+  \}\par
+\b 3.11 Add Task\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/task }}{\fldrslt{http://localhost:8085/api/task\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: POST\par
 REQUEST OBJECT FORMAT: \par
@@ -264,7 +293,7 @@ RESPONSE OBJECT FORMAT:\par
     "endDate": 1516473000000,\par
     "status": "I"\par
   \}\par
-3.11 Update Task\par
+\b 3.12 Update Task\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/task }}{\fldrslt{http://localhost:8085/api/task\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: PUT\par
 REQUEST OBJECT FORMAT: \par
@@ -291,7 +320,7 @@ RESPONSE OBJECT FORMAT:\par
     "endDate": 1516473000000,\par
     "status": "I"\par
   \}\par
-3.12 End Task\par
+\b 3.13 End Task\b0\par
 URL: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/api/task/\{id\} }}{\fldrslt{http://localhost:8085/api/task/\{id\}\ul0\cf0}}}}\i\f0\fs22\par
 \i0 METHOD: PUT\par
 REQUEST OBJECT FORMAT: N/A\par
