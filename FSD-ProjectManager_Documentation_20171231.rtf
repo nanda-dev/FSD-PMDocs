@@ -36,6 +36,7 @@ b. Open terminal/command-prompt, navigate to the PMServer root folder (where the
 c. Run the following command: mvn clean install\par
 d. Executable .jar file will be generated under the "target" folder\par
 NOTE: Maven needs to be installed in the machine, and the PATH environment variable set appropriately to issue the "mvn" command.\par
+NOTE: Database server is assumed to be running in the same machine as the API server, using the root user credentials listed in 2.1. In case of any changes, checkout the PMServer project, update the database connection configuration in application.properties file, and take a new build.\par
 2.2.3\i  Verify APIs are Up and Running\i0\par
 a. From the machine where the Server .jar is running, open the following URL in a browser: {{\field{\*\fldinst{HYPERLINK http://localhost:8085/ }}{\fldrslt{http://localhost:8085/\ul0\cf0}}}}\f0\fs22\par
 You should see the greeting message: \i "Hello, this is the Backend API Server for Project Manager SPA Application!"\par
